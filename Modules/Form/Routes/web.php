@@ -14,3 +14,9 @@
 Route::prefix('form')->group(function() {
     Route::get('/', 'FormController@index');
 });
+
+Route::group([
+
+], function () {
+   Route::get('admin/clients', ['as' => 'admin.clients.listAll', 'uses' => 'FormController@listAll']);
+});

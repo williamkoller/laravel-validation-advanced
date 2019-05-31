@@ -4,10 +4,11 @@ namespace Modules\Form\Entities;
 
 use Illuminate\Database\Eloquent\Model;
 
+
 class Client extends Model
 {
     const TYPE_INDIVIDUAL = 'individual';
-    const tYPE_LEGAL = 'legal';
+    const TYPE_LEGAL = 'legal';
     const MARITAL_STATUS = [
         1 => 'Solteiro',
         2 => 'Casado',

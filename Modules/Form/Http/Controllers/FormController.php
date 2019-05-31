@@ -12,9 +12,9 @@ class FormController extends Controller
      * Display a listing of the resource.
      * @return Response
      */
-    public function index()
+    public function listAll()
     {
-        return view('form::index');
+        return view('form::admin.clients.index');
     }
 
     /**

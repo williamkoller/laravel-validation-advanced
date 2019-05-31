@@ -22,9 +22,9 @@ class CreateClientsTable extends Migration
             $table->boolean('defaulter'); // inadimplente
             $table->date('date_birth')->nullable();
             $table->char('sex')->nullable();
-            $table->enum('marital_status', array_keys(Client::MARITAL_STATUS))->nullable();
-            $table->string('physical_disability');
-            $table->string('company_name');
+            $table->enum('marital_status', array_keys(\Modules\Form\Entities\Client::MARITAL_STATUS))->nullable();
+            $table->string('physical_disability')->nullable();
+            $table->string('company_name')->nullable();
             $table->string('client_type');
             $table->timestamps();
         });

@@ -5,6 +5,7 @@ namespace Modules\Form\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Routing\Controller;
+use Modules\Form\Entities\Client;
 
 class FormController extends Controller
 {
@@ -14,7 +15,8 @@ class FormController extends Controller
      */
     public function listAll()
     {
-        return view('form::admin.clients.index');
+        $clients = Client::all();
+        return view('form::admin.clients.index', compact('clients'));
     }
 
     /**
@@ -51,7 +53,7 @@ class FormController extends Controller
      * @param int $id
      * @return Response
      */
-    public function edit($id)
+    public function editClients($id)
     {
         return view('form::edit');
     }

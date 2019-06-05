@@ -19,4 +19,5 @@ Route::group([
 
 ], function () {
    Route::get('admin/clients', ['as' => 'admin.clients.listAll', 'uses' => 'FormController@listAll']);
+   Route::get('admin/clients/edit/{id}', ['as' => 'admin.clients.editClients', 'uses' => 'FormController@editClients']);
 });

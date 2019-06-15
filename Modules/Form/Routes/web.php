@@ -12,13 +12,20 @@
 */
 
 // Route::prefix('form')->group(function() {
-//     Route::get('/', 'FormController@index');
-// });
-
+////     Route::get('/', 'FormController@index');
+//// });
+//
 Route::group([
 
 ], function () {
    Route::get('admin/clients', ['as' => 'admin.clients.listAll', 'uses' => 'FormController@listAll']);
    Route::get('admin/clients/edit/{id}', ['as' => 'admin.clients.editClients', 'uses' => 'FormController@editClients']);
-   Route::get('admin/clients/create', ['as' => 'admin.clients.createClients', 'uses' => 'FormController@createClients']);
+   Route::get('admin/clients/create/', ['as' => 'admin.clients.createClients', 'uses' => 'FormController@createClients']);
+   Route::get('admin/clients/store', ['as' => 'admin.clients.store', 'uses' => 'FormController@store']);
 });
+
+//Route::group([
+//
+//], function () {
+//   Route::resource('clients', 'FormController');
+//});

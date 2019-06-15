@@ -1,20 +1,20 @@
 @extends('form::layouts.master')
 
 @section('content')
-    <h3>Listagem de clientes</h3>
+    <h3>List All Clients</h3>
     <br><br>
-    <a class="btn btn-default" href="{{ route('admin.clients.listAll') }}">Criar novo</a>
+    <a class="btn btn-default" href="{{ route('admin.clients.createClients') }}">Create new</a>
     <table class="table table-striped">
         <thead>
         <tr>
             <th>ID</th>
-            <th>Nome</th>
+            <th>Name</th>
             <th>CNPJ/CPF</th>
-            <th>Data Nasc.</th>
+            <th>Date Birth</th>
             <th>E-mail</th>
-            <th>Telefone</th>
-            <th>Sexo</th>
-            <th>Ação</th>
+            <th>Phone</th>
+            <th>Sex</th>
+            <th>Action</th>
         </tr>
         </thead>
         <tbody>
@@ -28,7 +28,8 @@
                 <td>{{ $client->phone }}</td>
                 <td>{{ $client->sex }}</td>
                 <td>
-                    <a href="{{ route('admin.clients.editClients', ['clients' => $client->id]) }}">Editar</a>
+                    <a href="{{ route('admin.clients.editClients', ['clients' => $client->id]) }}">Edit</a>
+                    <a href="{{ route('admin.clients.listAll', ['clients' => $client->id]) }}">View</a>
                 </td>
             </tr>
         @endforeach

@@ -37,7 +37,16 @@ class FormController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $this->_validate($request);
+        $data['defaulter'] = $request->has('defaulter');
+        $data['client_type'] = Client::getClientType($request->client_type);
+        Client::created($data);
+        return redirect()->route('admin.clients.listAll');
+    }
+
+    protected function _validate(Request $request)
+    {
+        
     }
 
     /**

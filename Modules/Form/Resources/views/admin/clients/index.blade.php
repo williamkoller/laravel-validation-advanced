@@ -4,7 +4,7 @@
     <h3>List All Clients</h3>
     <br/><br/>
     <a class="btn btn-default" href="{{ route('clients.create') }}">Create new</a>
-    <div class="row">
+    <div class="">
         <table class="table table-striped">
             <thead>
             <tr>

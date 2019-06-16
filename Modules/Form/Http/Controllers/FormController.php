@@ -4,8 +4,9 @@ namespace Modules\Form\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use Illuminate\Routing\Controller;
+use App\Http\Controllers\Controller;
 use Modules\Form\Entities\Client;
+
 
 
 class FormController extends Controller
@@ -48,6 +49,7 @@ class FormController extends Controller
     /**
      * @param Request $request
      * @return mixed
+     * @throws \Illuminate\Validation\ValidationException
      */
     protected function _validate(Request $request)
     {

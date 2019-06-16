@@ -29,20 +29,21 @@ class FormController extends Controller
     {
         $clientType = Client::getClientType($request->client_type);
 
-        return view('form::admin.clients.create', ['client' => new Client(), 'clientType' => $clientType]);
+        return view('form::admin.clients.create', ['client' => new Client(), 'clientType' => $clientType]); // passa uma estância vazia no model Client()
     }
 
     /**
      * Store a newly created resource in storage.
      * @param Request $request
      * @return Response
+     * @throws \Illuminate\Validation\ValidationException
      */
     public function store(Request $request)
     {
         $data = $this->_validate($request);
         $data['defaulter'] = $request->has('defaulter'); // verifica se tem algo vindo na requisição
         $data['client_type'] = Client::getClientType($request->client_type);
-        Client::created($data);
+        Client::create($data);
         return redirect()->route('clients.index');
     }
 
@@ -51,7 +52,7 @@ class FormController extends Controller
      * @return mixed
      * @throws \Illuminate\Validation\ValidationException
      */
-    protected function _validate(Request $request)
+    private function _validate(Request $request)
     {
         $clientType = Client::getClientType($request->client_type);
         $documentNumberType = $clientType == Client::TYPE_INDIVIDUAL ? 'cpf' : 'cnpj';

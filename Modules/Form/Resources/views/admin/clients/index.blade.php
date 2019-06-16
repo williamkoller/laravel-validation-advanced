@@ -29,7 +29,7 @@
                     <td>{{ $client->phone }}</td>
                     <td>{{ $client->sex }}</td>
                     <td>
-                        <a href="{{ route('clients.edit', ['clients' => $client->id]) }}">Edit</a>
+                        <a href="{{ route('clients.edit', ['clients' => $client->id]) }}">Edit</a> |
                         <a href="{{ route('clients.index', ['clients' => $client->id]) }}">View</a>
                     </td>
                 </tr>

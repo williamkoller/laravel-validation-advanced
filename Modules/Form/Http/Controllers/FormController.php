@@ -15,7 +15,7 @@ class FormController extends Controller
      * Display a listing of the resource.
      * @return Response
      */
-    public function index()
+    public function listAll()
     {
         $clients = Client::all(); // chama o model com todos os registros
         return view('form::admin.clients.index', compact('clients'));
@@ -25,7 +25,7 @@ class FormController extends Controller
      * Show the form for creating a new resource.
      * @return Response
      */
-    public function create(Request $request)
+    public function createClients(Request $request)
     {
         $clientType = Client::getClientType($request->client_type);
 
@@ -44,7 +44,7 @@ class FormController extends Controller
         $data['defaulter'] = $request->has('defaulter'); // verifica se tem algo vindo na requisição
         $data['client_type'] = Client::getClientType($request->client_type);
         Client::create($data);
-        return redirect()->route('clients.index');
+        return redirect()->route('admin.clients.listAll');
     }
 
     /**
@@ -92,7 +92,7 @@ class FormController extends Controller
      * @param int $id
      * @return Response
      */
-    public function edit($id)
+    public function editClients($id)
     {
         return view('form::admin.clients.edit');
     }

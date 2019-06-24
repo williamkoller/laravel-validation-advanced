@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0799b367-92e5-40f4-86a0-1480b08d386f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.docker/dockereasy.sh" beforeDir="false" afterPath="$PROJECT_DIR$/.docker/dockereasy.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modules/Form/Http/Controllers/FormController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Form/Http/Controllers/FormController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modules/Form/Resources/views/admin/clients/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Form/Resources/views/admin/clients/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,8 +30,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Modules/Form/Http/Controllers/FormController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="810">
-              <caret line="57" column="44" selection-start-line="57" selection-start-column="44" selection-end-line="57" selection-end-column="44" />
+            <state relative-caret-position="420">
+              <caret line="31" column="153" selection-start-line="31" selection-start-column="153" selection-end-line="31" selection-end-column="153" />
               <folding>
                 <element signature="e#49#77#0#PHP" expanded="true" />
               </folding>
@@ -44,7 +39,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Modules/Form/Resources/views/admin/clients/create.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="210">
@@ -54,28 +49,37 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Modules/Form/Entities/Client.php">
+        <entry file="file://$PROJECT_DIR$/Modules/Form/Resources/views/admin/clients/_form.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="724">
-              <caret line="74" column="42" selection-start-line="74" selection-start-column="42" selection-end-line="74" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Modules/Form/Resources/views/admin/clients/index.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="16" lean-forward="true" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+            <state relative-caret-position="645">
+              <caret line="43" column="8" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="8" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Modules/Form/Resources/views/admin/clients/_form.blade.php">
+        <entry file="file://$PROJECT_DIR$/Modules/Form/Entities/Client.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" selection-start-line="21" selection-end-line="21" />
+            <state relative-caret-position="450">
+              <caret line="30" column="30" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Modules/Form/Resources/views/admin/clients/index.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="465">
+              <caret line="31" column="100" selection-start-line="31" selection-start-column="100" selection-end-line="31" selection-end-column="100" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Modules/Form/Database/factories/ClientFactory.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="28" column="72" selection-start-line="28" selection-start-column="72" selection-end-line="28" selection-end-column="72" />
             </state>
           </provider>
         </entry>
@@ -99,22 +103,22 @@
         <option value="$PROJECT_DIR$/Modules/Form/Resources/views/form/_form_errors.blade.php" />
         <option value="$PROJECT_DIR$/Modules/Form/Resources/views/form/_form_group.blade.php" />
         <option value="$PROJECT_DIR$/Modules/Form/Resources/views/form/_help_block.blade.php" />
-        <option value="$PROJECT_DIR$/Modules/Form/Resources/views/admin/clients/_form.blade.php" />
         <option value="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" />
         <option value="$PROJECT_DIR$/Modules/Form/Resources/views/admin/clients/edit.blade.php" />
-        <option value="$PROJECT_DIR$/Modules/Form/Resources/views/admin/clients/create.blade.php" />
         <option value="$PROJECT_DIR$/Modules/Form/Routes/web.php" />
         <option value="$PROJECT_DIR$/Modules/Form/Http/Requests/ClientRequest.php" />
         <option value="$PROJECT_DIR$/Modules/Form/Http/Controllers/Auth/RegisterController.php" />
         <option value="$PROJECT_DIR$/app/User.php" />
-        <option value="$PROJECT_DIR$/Modules/Form/Http/Controllers/FormController.php" />
         <option value="$PROJECT_DIR$/.docker/dockereasy.sh" />
         <option value="$PROJECT_DIR$/Modules/Form/Database/Migrations/2019_06_16_062434_create_table_clients.php" />
         <option value="$PROJECT_DIR$/.docker/config.sh" />
         <option value="$PROJECT_DIR$/.docker/conf/nginx/site.conf" />
         <option value="$PROJECT_DIR$/.env" />
-        <option value="$PROJECT_DIR$/Modules/Form/Entities/Client.php" />
         <option value="$PROJECT_DIR$/Modules/Form/Resources/views/admin/clients/index.blade.php" />
+        <option value="$PROJECT_DIR$/Modules/Form/Http/Controllers/FormController.php" />
+        <option value="$PROJECT_DIR$/Modules/Form/Entities/Client.php" />
+        <option value="$PROJECT_DIR$/Modules/Form/Resources/views/admin/clients/_form.blade.php" />
+        <option value="$PROJECT_DIR$/Modules/Form/Resources/views/admin/clients/create.blade.php" />
       </list>
     </option>
   </component>
@@ -212,10 +216,10 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1402" />
-    <option name="y" value="28" />
-    <option name="width" value="1884" />
-    <option name="height" value="1052" />
+    <option name="x" value="36" />
+    <option name="y" value="146" />
+    <option name="width" value="1330" />
+    <option name="height" value="768" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -225,7 +229,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -236,29 +239,6 @@
             <path>
               <item name="laravel_validation_advanced" type="b2602c69:ProjectViewProjectNode" />
               <item name="laravel_validation_advanced" type="462c0819:PsiDirectoryNode" />
-              <item name=".docker" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="laravel_validation_advanced" type="b2602c69:ProjectViewProjectNode" />
-              <item name="laravel_validation_advanced" type="462c0819:PsiDirectoryNode" />
-              <item name=".docker" type="462c0819:PsiDirectoryNode" />
-              <item name="conf" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="laravel_validation_advanced" type="b2602c69:ProjectViewProjectNode" />
-              <item name="laravel_validation_advanced" type="462c0819:PsiDirectoryNode" />
-              <item name=".docker" type="462c0819:PsiDirectoryNode" />
-              <item name="conf" type="462c0819:PsiDirectoryNode" />
-              <item name="nginx" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="laravel_validation_advanced" type="b2602c69:ProjectViewProjectNode" />
-              <item name="laravel_validation_advanced" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="laravel_validation_advanced" type="b2602c69:ProjectViewProjectNode" />
-              <item name="laravel_validation_advanced" type="462c0819:PsiDirectoryNode" />
               <item name="Modules" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -273,6 +253,22 @@
               <item name="Modules" type="462c0819:PsiDirectoryNode" />
               <item name="Form" type="462c0819:PsiDirectoryNode" />
               <item name="Database" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="laravel_validation_advanced" type="b2602c69:ProjectViewProjectNode" />
+              <item name="laravel_validation_advanced" type="462c0819:PsiDirectoryNode" />
+              <item name="Modules" type="462c0819:PsiDirectoryNode" />
+              <item name="Form" type="462c0819:PsiDirectoryNode" />
+              <item name="Database" type="462c0819:PsiDirectoryNode" />
+              <item name="factories" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="laravel_validation_advanced" type="b2602c69:ProjectViewProjectNode" />
+              <item name="laravel_validation_advanced" type="462c0819:PsiDirectoryNode" />
+              <item name="Modules" type="462c0819:PsiDirectoryNode" />
+              <item name="Form" type="462c0819:PsiDirectoryNode" />
+              <item name="Database" type="462c0819:PsiDirectoryNode" />
+              <item name="faker_data" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="laravel_validation_advanced" type="b2602c69:ProjectViewProjectNode" />
@@ -281,6 +277,14 @@
               <item name="Form" type="462c0819:PsiDirectoryNode" />
               <item name="Database" type="462c0819:PsiDirectoryNode" />
               <item name="Migrations" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="laravel_validation_advanced" type="b2602c69:ProjectViewProjectNode" />
+              <item name="laravel_validation_advanced" type="462c0819:PsiDirectoryNode" />
+              <item name="Modules" type="462c0819:PsiDirectoryNode" />
+              <item name="Form" type="462c0819:PsiDirectoryNode" />
+              <item name="Database" type="462c0819:PsiDirectoryNode" />
+              <item name="Seeders" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="laravel_validation_advanced" type="b2602c69:ProjectViewProjectNode" />
@@ -327,13 +331,14 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="editor.config.ad.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/dev-job/plataforma17" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="yarn" />
@@ -376,18 +381,19 @@
       <workItem from="1559320619126" duration="4548000" />
       <workItem from="1559747737202" duration="2131000" />
       <workItem from="1560613602877" duration="20006000" />
-      <workItem from="1560664989858" duration="3278000" />
+      <workItem from="1560664989858" duration="7643000" />
+      <workItem from="1560774155980" duration="648000" />
+      <workItem from="1561410332815" duration="292000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36495000" />
+    <option name="totallyTimeSpent" value="41800000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1402" y="28" width="1884" height="1052" extended-state="6" />
-    <editor active="true" />
+    <frame x="36" y="146" width="1330" height="768" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15049073" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1546875" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="npm" order="3" side_tool="true" />
@@ -422,40 +428,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Modules/Form/composer.json">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Modules/Form/Database/Seeders/FormDatabaseSeeder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-          <folding>
-            <element signature="e#49#80#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Modules/Form/Database/Seeders/ClientsTableSeeder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
-          <folding>
-            <element signature="e#49#80#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Modules/Form/Database/faker_data/document_number.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="22" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Modules/Form/Database/factories/ClientFactory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="40" selection-start-line="40" selection-end-line="40" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Modules/Form/Resources/views/layouts/master.blade.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -576,23 +548,7 @@
     <entry file="file://$PROJECT_DIR$/Modules/Form/Config/config.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Modules/Form/Routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Modules/Form/Database/Migrations/2019_04_18_183342_create_clients_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
-          <folding>
-            <element signature="e#7#45#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Modules/Form/Database/Migrations/2019_04_18_183342_create_clients_table.php" />
     <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -629,20 +585,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Modules/Form/Resources/views/admin/clients/_form.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Modules/Form/Resources/views/admin/clients/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/composer.lock">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-90" />
@@ -670,27 +612,82 @@
         <state relative-caret-position="-405" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Modules/Form/Database/Seeders/ClientsTableSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+          <folding>
+            <element signature="e#49#80#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Modules/Form/Database/Seeders/FormDatabaseSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="45" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
+          <folding>
+            <element signature="e#49#80#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Modules/Form/Database/faker_data/document_number.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="22" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Modules/Form/Routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Modules/Form/Http/Controllers/FormController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="57" column="44" selection-start-line="57" selection-start-column="44" selection-end-line="57" selection-end-column="44" />
+        <state relative-caret-position="420">
+          <caret line="31" column="153" selection-start-line="31" selection-start-column="153" selection-end-line="31" selection-end-column="153" />
           <folding>
             <element signature="e#49#77#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Modules/Form/Resources/views/admin/clients/_form.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="645">
+          <caret line="43" column="8" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Modules/Form/Entities/Client.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="724">
-          <caret line="74" column="42" selection-start-line="74" selection-start-column="42" selection-end-line="74" selection-end-column="42" />
+        <state relative-caret-position="450">
+          <caret line="30" column="30" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Modules/Form/Resources/views/admin/clients/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="16" lean-forward="true" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+        <state relative-caret-position="465">
+          <caret line="31" column="100" selection-start-line="31" selection-start-column="100" selection-end-line="31" selection-end-column="100" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Modules/Form/Database/factories/ClientFactory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="72" selection-start-line="28" selection-start-column="72" selection-end-line="28" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Modules/Form/Resources/views/admin/clients/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>

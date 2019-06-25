@@ -3,7 +3,7 @@
 @section('content')
     <h3>List All Clients</h3>
     <br/><br/>
-    <a class="btn btn-default" href="{{ route('clients.create') }}">Create new</a>
+    <a class="btn btn-default" href="{{ route('admin.clients.createClients') }}">Create new</a>
     <div class="">
         <table class="table table-striped">
             <thead>
@@ -29,8 +29,8 @@
                     <td>{{ $client->phone }}</td>
                     <td>{{ $client->sex }}</td>
                     <td>
-                        <a href="{{ route('clients.edit', ['clients' => $client->id]) }}">Edit</a>
-                        <a href="{{ route('clients.index', ['clients' => $client->id]) }}">View</a>
+                        <a href="{{ route('admin.clients.editClients', ['clients' => $client->id]) }}">Edit</a> |
+                        <a href="{{ route('admin.clients.listAll', ['clients' => $client->id]) }}">View</a>
                     </td>
                 </tr>
             @endforeach

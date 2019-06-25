@@ -15,7 +15,7 @@ class FormController extends Controller
      * Display a listing of the resource.
      * @return Response
      */
-    public function index()
+    public function listAll()
     {
         $clients = Client::all(); // chama o model com todos os registros
         return view('form::admin.clients.index', compact('clients'));
@@ -25,25 +25,26 @@ class FormController extends Controller
      * Show the form for creating a new resource.
      * @return Response
      */
-    public function create(Request $request)
+    public function createClients(Request $request)
     {
         $clientType = Client::getClientType($request->client_type);
 
-        return view('form::admin.clients.create', ['client' => new Client(), 'clientType' => $clientType]);
+        return view('form::admin.clients.create', ['client' => new Client(), 'clientType' => $clientType]); // passa uma estância vazia no model Client()
     }
 
     /**
      * Store a newly created resource in storage.
      * @param Request $request
      * @return Response
+     * @throws \Illuminate\Validation\ValidationException
      */
     public function store(Request $request)
     {
         $data = $this->_validate($request);
         $data['defaulter'] = $request->has('defaulter'); // verifica se tem algo vindo na requisição
         $data['client_type'] = Client::getClientType($request->client_type);
-        Client::created($data);
-        return redirect()->route('clients.index');
+        Client::create($data);
+        return redirect()->route('admin.clients.listAll');
     }
 
     /**
@@ -51,7 +52,7 @@ class FormController extends Controller
      * @return mixed
      * @throws \Illuminate\Validation\ValidationException
      */
-    protected function _validate(Request $request)
+    private function _validate(Request $request)
     {
         $clientType = Client::getClientType($request->client_type);
         $documentNumberType = $clientType == Client::TYPE_INDIVIDUAL ? 'cpf' : 'cnpj';
@@ -91,7 +92,7 @@ class FormController extends Controller
      * @param int $id
      * @return Response
      */
-    public function edit($id)
+    public function editClients($id)
     {
         return view('form::admin.clients.edit');
     }

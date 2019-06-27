@@ -10,4 +10,5 @@ Homestead.yaml
 npm-debug.log
 yarn-error.log
 .docker
-.idea/
+.idea/workspace.xml
+.idea

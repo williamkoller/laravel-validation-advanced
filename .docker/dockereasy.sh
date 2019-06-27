@@ -21,16 +21,12 @@ elif [[ $platform == 'windows10' ]]; then
    HOSTS_FILE=/c/Windows/System32/drivers/etc/hosts
 fi
 
-IP=$(docker-machine ip $(docker-machine active))
+IP=127.0.0.1
 NEW_HOST="${IP} ${DOMAIN_NAME}"
 
 down()
 {
     docker-compose -p ${DOMAIN_NAME} down
-    echo "Removing hosts entry ..."
-    sed -i "s/${NEW_HOST}/ /g" ${HOSTS_FILE}
-    sed '/^\s*$/d' ${HOSTS_FILE}
-    echo "Ok!"
 }
 
 exec()
@@ -46,9 +42,6 @@ logs()
 up()
 {
     docker-compose -p ${DOMAIN_NAME} up -d --build
-    echo "Updating hosts file..."
-    updateHosts
-    echo "Hosts updated!"
 }
 
 restart()
@@ -59,15 +52,6 @@ restart()
 ps()
 {
     docker-compose -p ${DOMAIN_NAME} ps
-}
-
-updateHosts()
-{
-    sed '/^\s*$/d' ${HOSTS_FILE}
-    echo "" >> $HOSTS_FILE
-    echo $NEW_HOST >> $HOSTS_FILE
-    echo "Added new host: ${NEW_HOST}"
-    echo "in ${HOSTS_FILE}"
 }
 
 if [ -z "$1" ]

@@ -60,20 +60,20 @@ services:
           - mysql
     redis:
         container_name: ${CONTAINER_NAME}.redis
-        image: redis:3.0-alpine
+        image: redis:3.2.10-alpine
         ports:
             - "6379:6379"
         volumes:
             - redisdata:/data
-    queue:
-        image: ambientum/php:7.2
-        container_name: ${CONTAINER_NAME}.queue
-        command: php /var/www/artisan queue:work redis --sleep=3 --tries=3 --timeout=0 --queue=default,manualReleaseJob,emails,recoveryPassword,paymentProcess,refund,sms
-        volumes:
-            - ../:/var/www
-        links:
-            - mysql
-            - redis
+#    queue:
+#        image: ambientum/php:7.2
+#        container_name: ${CONTAINER_NAME}.queue
+#        command: php /var/www/artisan queue:work redis --sleep=3 --tries=3 --timeout=0 --queue=default,manualReleaseJob,emails,recoveryPassword,paymentProcess,refund,sms
+#        volumes:
+#            - ../:/var/www
+#        links:
+#            - mysql
+#            - redis
 volumes:
     mysqldata:
     redisdata:

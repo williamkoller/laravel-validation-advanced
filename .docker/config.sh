@@ -1,5 +1,5 @@
 #!/bin/sh
 
-export CONTAINER_NAME=validation.laravel.local
-export DOMAIN_NAME=validation.laravel.local
-export DATABASE_NAME=validation_laravel
+export CONTAINER_NAME=william.cloud
+export DOMAIN_NAME=william.cloud.local
+export DATABASE_NAME=williamcloud

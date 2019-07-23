@@ -1,6 +1,7 @@
 @extends('form::layouts.layout')
 
 @section('content')
+    <title>List All Clients to Application</title>
     <h3>List All Clients</h3>
     <br/><br/>
     <a class="btn btn-default" href="{{ route('clients.create') }}">Create new</a>

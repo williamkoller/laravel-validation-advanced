@@ -2,6 +2,7 @@
 
 @section('content')
     <h3>Ver cliente</h3>
+    <a href="{{ route('clients.index') }}" class="btn btn-link">Back</a>
     <a class="btn btn-primary" href="{{ route('clients.edit',['client' => $client->id]) }}">Editar</a>
     <a class="btn btn-danger" href="{{ route('clients.destroy',['client' => $client->id]) }}"
        onclick="event.preventDefault();if(confirm('Deseja excluir este item?')){document.getElementById('form-delete').submit();}">Excluir</a>

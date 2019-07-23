@@ -27,6 +27,8 @@
 //   Route::delete('admin/clients/{id}', ['as' => 'admin.clients.destroyClients', 'uses' => 'FormController@destroyClients']);
 //});
 
+// Facade - Design Pattern
+
 Route::group([
     'prefix' => 'admin'
 

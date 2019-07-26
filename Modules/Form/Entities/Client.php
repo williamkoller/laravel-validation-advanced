@@ -41,7 +41,7 @@ class Client extends Model
     {
         return $type == Client::TYPE_LEGAL ? $type : Client::TYPE_INDIVIDUAL;
     }
-
+}
 //    /**
 //     * @return string
 //     * @throws \Exception
@@ -75,4 +75,4 @@ class Client extends Model
 //    {
 //        $this->attributes['document_number'] = preg_replace('/[0-9]/', '', $value);
 //    }
-}
+//}

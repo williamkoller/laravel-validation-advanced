@@ -13,122 +13,90 @@ class FormController extends Controller
 {
     /**
      * Display a listing of the resource.
-     * @return Response
+     *
+     * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        $clients = Client::all(); // chama o model com todos os registros
+        \Session::flash('chave','valor');
+        $clients = Client::paginate(50);
         return view('form::admin.clients.index', compact('clients'));
     }
-
     /**
      * Show the form for creating a new resource.
-     * @return Response
+     *
+     * @return \Illuminate\Http\Response
      */
     public function create(Request $request)
     {
         $clientType = Client::getClientType($request->client_type);
-
-        return view('form::admin.clients.create', ['client' => new Client(), 'clientType' => $clientType]); // passa uma estância vazia no model Client()
+        return view('form::admin.clients.create', ['client' => new Client(), 'clientType' => $clientType]);
     }
-
     /**
      * Store a newly created resource in storage.
-     * @param Request $request
-     * @return Response
-     * @throws \Illuminate\Validation\ValidationException
+     *
+     * @param  \Illuminate\Http\Request $request
+     * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ClientRequest $request)
     {
-        $data = $this->_validate($request);
-        $data['defaulter'] = $request->has('defaulter'); // verifica se tem algo vindo na requisição
+        $data = $request->only(array_keys($request->rules()));
+        $data['defaulter'] = $request->has('defaulter');
         $data['client_type'] = Client::getClientType($request->client_type);
         Client::create($data);
-        return redirect()->route('clients.index');
+        //\Session::flash('message','Cliente cadastrado com sucesso');
+        return redirect()->route('clients.index')
+            ->with('message','Cliente cadastrado com sucesso');
     }
-
     /**
-     * Show the specified resource.
-     * @param Client $client
-     * @return Response
+     * Display the specified resource.
+     *
+     * @param  int $client
+     * @return \Illuminate\Http\Response
      */
     public function show(Client $client)
     {
         return view('form::admin.clients.show', compact('client'));
     }
-
     /**
      * Show the form for editing the specified resource.
-     * @param Client $client
-     * @return Response
+     *
+     * @param  int $client
+     * @return \Illuminate\Http\Response
      */
-    public function edit(Client $client)
+    public function edit(Client $client) //Route Model Binding Implicito
     {
         $clientType = $client->client_type;
-        return view('form::admin.clients.edit', compact('client','clientType'));
+        return view('form::admin.clients.edit', compact('client', 'clientType'));
     }
-
     /**
      * Update the specified resource in storage.
-     * @param Request $request
-     * @param int $client
-     * @return Response
-     * @throws \Illuminate\Validation\ValidationException
+     *
+     * @param  \Illuminate\Http\Request $request
+     * @param  int $client
+     * @return \Illuminate\Http\Response
      */
     public function update(ClientRequest $request, Client $client)
     {
         $data = $request->only(array_keys($request->rules()));
-        $data = $this->_validate($request);
         $data['defaulter'] = $request->has('defaulter');
         $client->fill($data);
         $client->save();
-
-        return redirect()->route('clients.index')->with('message', 'Client updated with success');
-
+        //\Session::flash('message','Cliente alterado com sucesso');
+        return redirect()->route('clients.index')
+            ->with('message','Cliente alterado com sucesso');
     }
-
     /**
      * Remove the specified resource from storage.
-     * @param int $id
-     * @return Response
-     * @throws \Exception
+     *
+     * @param  int $id
+     * @return \Illuminate\Http\Response
      */
     public function destroy(Client $client)
     {
         $client->delete();
-        return redirect()->route('clients.index')->with('message', 'Client deleted with success');
+        return redirect()->route('clients.index')
+            ->with('message','Cliente excluído com sucesso');
     }
-
-    /**
-     * @param Request $request
-     * @return mixed
-     * @throws \Illuminate\Validation\ValidationException
-     */
-    private function _validate(Request $request)
-    {
-        $clientType = Client::getClientType($request->client_type);
-        $documentNumberType = $clientType == Client::TYPE_INDIVIDUAL ? 'cpf' : 'cnpj';
-        $client = $request->route('client');
-        $clientId = $client instanceof Client ? $client->id : null;
-        $rules = [
-            'name' => 'required|max:255',
-            'document_number' => "required|unique:clients,document_number,$clientId|document_number:$documentNumberType",
-            'email' => 'required|email',
-            'phone' => 'required'
-        ];
-        $maritalStatus = implode(',', array_keys(Client::MARITAL_STATUS));
-        $rulesIndividual = [
-            'date_birth' => 'required|date',
-            'marital_status' => "required|in:$maritalStatus",
-            'sex' => 'required|in:m,f',
-            'physical_disability' => 'max:255'
-        ];
-        $rulesLegal = [
-            'company_name' => 'required|max:255'
-        ];
-        return $this->validate($request, $clientType == Client::TYPE_INDIVIDUAL ?
-            $rules + $rulesIndividual : $rules + $rulesLegal);
-    }
-
 
 }

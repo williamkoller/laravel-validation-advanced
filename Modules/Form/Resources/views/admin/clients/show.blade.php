@@ -6,10 +6,12 @@
     <a class="btn btn-primary" href="{{ route('clients.edit',['client' => $client->id]) }}">Editar</a>
     <a class="btn btn-danger" href="{{ route('clients.destroy',['client' => $client->id]) }}"
        onclick="event.preventDefault();if(confirm('Deseja excluir este item?')){document.getElementById('form-delete').submit();}">Excluir</a>
-    <form id="form-delete"style="display: none" action="{{ route('clients.destroy',['client' => $client->id]) }}" method="post">
-        {{ csrf_field() }}
-        {{ method_field('DELETE') }}
-    </form>
+    {{ Form::open(['route' => ['clients.destroy', $client->id], 'method' => 'DELETE', 'id' => 'form-delete']) }}
+{{--    <form id="form-delete"style="display: none" action="{{ route('clients.destroy',['client' => $client->id]) }}" method="post">--}}
+{{--        {{ csrf_field() }}--}}
+{{--        {{ method_field('DELETE') }}--}}
+{{--    </form>--}}
+    {{ Form::close() }}
     <br/><br/>
     <table class="table table-bordered">
         <tbody>

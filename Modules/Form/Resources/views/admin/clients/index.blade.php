@@ -24,8 +24,8 @@
                 <tr>
                     <td>{{ $client->id }}</td>
                     <td>{{ $client->name }}</td>
-                    <td>{{ $client->document_number }}</td>
-                    <td>{{ $client->date_birth }}</td>
+                    <td>{{ $client->document_number_formatted }}</td>
+                    <td>{{ $client->date_birth_formatted }}</td>
                     <td>{{ $client->email }}</td>
                     <td>{{ $client->phone }}</td>
                     <td>{{ $client->sex }}</td>
@@ -38,5 +38,5 @@
             </tbody>
         </table>
     </div>
-
+    {{$clients->links()}}
 @stop

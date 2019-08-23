@@ -92,7 +92,7 @@
                     <a href="https://nova.laravel.com">Nova</a>
                     <a href="https://forge.laravel.com">Forge</a>
                     <a href="https://github.com/laravel/laravel">GitHub</a>
-                    <a href="{{ route('clients.index') }}">List</a>
+                    <a href="{{ route('clients.index') }}">Listen Clients</a>
                 </div>
             </div>
         </div>

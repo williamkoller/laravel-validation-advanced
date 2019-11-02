@@ -1,0 +1,28 @@
+FROM php:7.2-fpm
+
+RUN apt-get update -y
+RUN apt-get install unzip -y
+RUN apt-get install iputils-ping -y
+RUN apt-get install htop -y
+RUN apt-get install telnet -y
+RUN apt-get install -yq \
+            libfreetype6-dev \
+            libmcrypt-dev \
+            libjpeg-dev \
+            libpng-dev
+RUN apt-get update && apt-get install -y libc-client-dev libkrb5-dev && rm -r /var/lib/apt/lists/*
+RUN docker-php-ext-configure imap --with-kerberos --with-imap-ssl \
+    && docker-php-ext-install imap
+RUN docker-php-ext-configure gd \
+            --enable-gd-native-ttf \
+            --with-freetype-dir=/usr/include/freetype2 \
+            --with-png-dir=/usr/include \
+            --with-jpeg-dir=/usr/include
+RUN docker-php-ext-install gd && docker-php-ext-enable gd
+RUN docker-php-ext-install pdo pdo_mysql
+RUN docker-php-ext-install zip
+RUN docker-php-ext-install mbstring && docker-php-ext-enable mbstring
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer
+
+
+WORKDIR /var/www

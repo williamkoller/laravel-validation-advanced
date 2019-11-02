@@ -1,0 +1,79 @@
+version: '2'
+services:
+    web:
+        build:
+            context: ./
+            dockerfile: web.docker
+        #image: felipemarques/plataforma17-web:latest
+        container_name: ${CONTAINER_NAME}.web
+        volumes:
+            - ../:/var/www
+            - ./ssl:/etc/nginx/ssl:ro
+            - ./conf/nginx:/etc/nginx/conf.d
+        ports:
+            - "80:80"
+            - "443:443"
+            - "9000:9000"
+        environment:
+            DOMAIN_NAME: ${DOMAIN_NAME}
+            VIRTUAL_HOST: ${DOMAIN_NAME}
+            HOSTNAME: ${DOMAIN_NAME}
+        links:
+            - app
+    app:
+        build:
+            context: ./
+            dockerfile: app.docker
+        #image: felipemarques/plataforma17-app:latest
+        container_name: ${CONTAINER_NAME}.app
+        volumes:
+            - ../:/var/www
+        links:
+            - mysql
+            - redis
+        environment:
+            DB_PORT: 3306
+            DB_HOST: mysql
+            REDIS_PORT: 6379
+            REDIS_HOST: redis
+    mysql:
+        image: mysql:5.6.34
+        restart: always
+        container_name: ${CONTAINER_NAME}.mysql
+        environment:
+            MYSQL_ROOT_PASSWORD: root
+            MYSQL_DATABASE: ${DATABASE_NAME}
+            MYSQL_USER: root
+            MYSQL_PASSWORD: root
+        ports:
+            - "3306:3306"
+        volumes:
+            - mysqldata:/var/lib/mysql
+    phpmyadmin:
+        image: phpmyadmin/phpmyadmin:latest
+        container_name: ${CONTAINER_NAME}.phpmyadmin
+        environment:
+            PMA_HOST: mysql
+        ports:
+          - "8080:80"
+        links:
+          - mysql
+    redis:
+        container_name: ${CONTAINER_NAME}.redis
+        image: redis:3.2.10-alpine
+        ports:
+            - "6379:6379"
+        volumes:
+            - redisdata:/data
+#    queue:
+#        image: ambientum/php:7.2
+#        container_name: ${CONTAINER_NAME}.queue
+#        command: php /var/www/artisan queue:work redis --sleep=3 --tries=3 --timeout=0 --queue=default,manualReleaseJob,emails,recoveryPassword,paymentProcess,refund,sms
+#        volumes:
+#            - ../:/var/www
+#        links:
+#            - mysql
+#            - redis
+volumes:
+    mysqldata:
+    redisdata:

@@ -14,9 +14,9 @@ class Client extends Model
     const TYPE_LEGAL = 'legal';
 
     const MARITAL_STATUS = [
-        1 => 'Solteiro',
-        2 => 'Casado',
-        3 => 'Divorciado'
+        1 => 'Single',
+        2 => 'Married',
+        3 => 'Divorced'
     ];
 
     protected $fillable = [
@@ -48,7 +48,7 @@ class Client extends Model
      */
     public function getSexFormattedAttribute()
     {
-        return $this->client_type == self::TYPE_INDIVIDUAL ? ($this->sex == 'm' ? 'Masculino' : 'Feminino') : "";
+        return $this->client_type == self::TYPE_INDIVIDUAL ? ($this->sex == 'm' ? 'Male' : 'Female') : "";
     }
 
     public function getDateBirthFormattedAttribute()

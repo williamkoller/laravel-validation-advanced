@@ -46,7 +46,7 @@ class FormController extends Controller
         Client::create($data);
         //\Session::flash('message','Cliente cadastrado com sucesso');
         return redirect()->route('clients.index')
-            ->with('message','Cliente cadastrado com sucesso');
+            ->with('message','Client successfully registered ');
     }
     /**
      * Display the specified resource.
@@ -84,7 +84,7 @@ class FormController extends Controller
         $client->save();
         //\Session::flash('message','Cliente alterado com sucesso');
         return redirect()->route('clients.index')
-            ->with('message','Cliente alterado com sucesso');
+            ->with('message','Client successfully changed');
     }
     /**
      * Remove the specified resource from storage.
@@ -96,7 +96,7 @@ class FormController extends Controller
     {
         $client->delete();
         return redirect()->route('clients.index')
-            ->with('message','Cliente excluído com sucesso');
+            ->with('message','Client successfully deleted');
     }
 
 }

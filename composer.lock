@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "812b53fc38a9a53cc178a877d3de20cb",
+    "content-hash": "ba50217ede8daa004f794259262a311b",
     "packages": [
         {
             "name": "codeedu/code_validator",
@@ -5892,7 +5892,7 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": "~7.2.11"
+        "php": "~7.2.24"
     },
     "platform-dev": []
 }

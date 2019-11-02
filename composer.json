@@ -8,7 +8,7 @@
     ],
     "license": "MIT",
     "require": {
-        "php": "~7.2.11",
+        "php": "~7.2.24",
         "codeedu/code_validator": "0.0.2",
         "doctrine/dbal": "^2.9",
         "fideloper/proxy": "^4.0",

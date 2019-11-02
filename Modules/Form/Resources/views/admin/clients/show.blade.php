@@ -1,7 +1,7 @@
 @extends('form::layouts.layout')
 
 @section('content')
-    <h3>View Client</h3>
+    <h3>View Clients</h3>
     <a href="{{ route('clients.index') }}" class="btn btn-secondary" style="margin-bottom: 15px;">Back</a>
     <br>
     <a class="btn btn-primary" href="{{ route('clients.edit',['client' => $client->id]) }}">Edit</a>

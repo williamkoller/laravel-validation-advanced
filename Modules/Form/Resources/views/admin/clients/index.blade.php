@@ -1,9 +1,8 @@
 @extends('form::layouts.layout')
 
 @section('content')
-    <title>List All Clients to Application</title>
+    <title>List of All Application Clients</title>
     <h3>List All Clients</h3>
-    <br/><br/>
     <a class="btn btn-default" href="{{ route('clients.create') }}">Create new</a>
     <div class="">
         <table class="table table-striped">
@@ -28,7 +27,7 @@
                     <td>{{ $client->date_birth_formatted }}</td>
                     <td>{{ $client->email }}</td>
                     <td>{{ $client->phone }}</td>
-                    <td>{{ $client->sex }}</td>
+                    <td>{{ $client->sex_formatted }}</td>
                     <td>
                         <a href="{{ route('clients.edit', ['clients' => $client->id]) }}">Edit</a> |
                         <a href="{{ route('clients.show', ['clients' => $client->id]) }}">View</a>

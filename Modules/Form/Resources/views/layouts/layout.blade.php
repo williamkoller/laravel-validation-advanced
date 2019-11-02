@@ -1,6 +1,7 @@
 <html>
 <head>
     <link rel="stylesheet" href="/css/app.css">
+    <title>Form and Validations with Laravel</title>
 </head>
 <body>
 <div class="row">

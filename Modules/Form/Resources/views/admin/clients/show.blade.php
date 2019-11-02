@@ -1,18 +1,18 @@
 @extends('form::layouts.layout')
 
 @section('content')
-    <h3>Ver cliente</h3>
-    <a href="{{ route('clients.index') }}" class="btn btn-link">Back</a>
-    <a class="btn btn-primary" href="{{ route('clients.edit',['client' => $client->id]) }}">Editar</a>
+    <h3>View Client</h3>
+    <a href="{{ route('clients.index') }}" class="btn btn-secondary" style="margin-bottom: 15px;">Back</a>
+    <br>
+    <a class="btn btn-primary" href="{{ route('clients.edit',['client' => $client->id]) }}">Edit</a>
     <a class="btn btn-danger" href="{{ route('clients.destroy',['client' => $client->id]) }}"
-       onclick="event.preventDefault();if(confirm('Deseja excluir este item?')){document.getElementById('form-delete').submit();}">Excluir</a>
+       onclick="event.preventDefault();if(confirm('Want to delete this client?')){document.getElementById('form-delete').submit();}">Excluir</a>
     {{ Form::open(['route' => ['clients.destroy', $client->id], 'method' => 'DELETE', 'id' => 'form-delete']) }}
 {{--    <form id="form-delete"style="display: none" action="{{ route('clients.destroy',['client' => $client->id]) }}" method="post">--}}
 {{--        {{ csrf_field() }}--}}
 {{--        {{ method_field('DELETE') }}--}}
 {{--    </form>--}}
     {{ Form::close() }}
-    <br/><br/>
     <table class="table table-bordered">
         <tbody>
         <tr>
@@ -40,34 +40,34 @@
             <td>
                 @switch($client->marital_status)
                     @case(1)
-                    Solteiro
+                    Single
                     @break
 
                     @case(2)
-                    Casado
+                    Married
                     @break
 
                     @case(3)
-                    Divorciado
+                    Divorced
                     @break
                 @endswitch
             </td>
         </tr>
         <tr>
-            <th scope="row">Data Nasc.</th>
+            <th scope="row">Date Birth </th>
             <td>{{$client->date_birth_formatted}}</td>
         </tr>
         <tr>
-            <th scope="row">Sexo</th>
-            <td>{{$client->sex}}{{$client->sex_formatted }}</td>
+            <th scope="row">Sex</th>
+            <td>{{$client->sex_formatted }}</td>
         </tr>
         <tr>
-            <th scope="row">Def. Física</th>
+            <th scope="row">Physical Disability</th>
             <td>{{$client->physical_disability}}</td>
         </tr>
         <tr>
-            <th scope="row">Inadimplente</th>
-            <td>{{$client->defaulter?'Sim': 'Não'}}</td>
+            <th scope="row">Defaulting</th>
+            <td>{{$client->defaulter?'Yes': 'No'}}</td>
         </tr>
         </tbody>
     </table>

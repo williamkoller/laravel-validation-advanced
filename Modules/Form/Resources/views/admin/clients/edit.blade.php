@@ -7,7 +7,7 @@
     {{ Form::model($client,['route' => ['clients.update', $client->id], 'method' => 'PUT']) }}
 {{--        {{ method_field('PUT') }}--}}
         @include('form::admin.clients._form')
-        <button type="submit" class="btn btn-default">Salvar</button>
+        <button type="submit" class="btn btn-default">Save</button>
 {{--    </form>--}}
     {{ Form::close() }}
 

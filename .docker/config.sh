@@ -1,5 +1,5 @@
 #!/bin/sh
 
-export CONTAINER_NAME=william.cloud
-export DOMAIN_NAME=william.cloud.local
-export DATABASE_NAME=wk_cloud
+export CONTAINER_NAME=wk-cloud
+export DOMAIN_NAME=wk-cloud.local
+export DATABASE_NAME=wkcloud
